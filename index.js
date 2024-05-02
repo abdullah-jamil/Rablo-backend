@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors");
 
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "https://rablo-frontend.onrender.com/",
   credentials: true, // Allow credentials (cookies, etc.)
 };
 
