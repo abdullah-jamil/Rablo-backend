@@ -1,5 +1,13 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
+
+const corsOptions = {
+  origin: "http://localhost:3000",
+  credentials: true, // Allow credentials (cookies, etc.)
+};
+
+app.use(cors(corsOptions));
 
 //Load config from env file
 require("dotenv").config();
