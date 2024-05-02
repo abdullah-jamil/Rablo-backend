@@ -1,12 +1,12 @@
 const Crud = require("../models/crud");
 exports.fetchCrudHigher = async (req, res) => {
   try {
-    const featuredHigherProducts = -1;
+    const featuredHigherProducts = await Crud.find({ price: { $gt: 20 } });
     //response
     res.status(200).json({
       success: true,
       data: featuredHigherProducts,
-      message: `Entire Featured Data is fetched whose value is higher than ${nn}`,
+      message: `Entire Featured Data is fetched whose value is higher than 20`,
     });
   } catch (err) {
     console.error(err);
